@@ -189,7 +189,34 @@ footer {
   letter-spacing: .12em;
   text-transform: uppercase;
 }
-
+/* LOCATION */
+.location-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, .8fr) minmax(400px, 1.2fr);
+  gap: clamp(45px, 7vw, 100px);
+  align-items: center;
+}
+.location-copy {
+  max-width: 520px;
+}
+.location-copy p {
+  margin-top: 34px;
+}
+.location-photo {
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.location-photo img {
+  display: block;
+  width: 100%;
+  height: clamp(420px, 48vw, 650px);
+  object-fit: cover;
+  /* Bianco e nero */
+  filter: grayscale(100%);
+  /* Leggermente più morbida/editoriale */
+  opacity: .92;
+}
 @media (max-width: 700px) {
   .site-header { padding: 22px 6vw; }
   .menu-toggle { display: block; }
@@ -230,4 +257,22 @@ footer {
   h2 { font-size: clamp(3.3rem, 16vw, 5rem); }
   .section-content p { margin-top: 28px; }
   footer { padding: 28px 7vw; flex-direction: column; gap: 5px; }
+  .location-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+.location-copy {
+  width: 100%;
+}
+.location-photo {
+  width: 100%;
+}
+.location-photo img {
+  width: 100%;
+  height: 62vw;
+  min-height: 260px;
+  max-height: 380px;
+  object-fit: cover;
+}
 }
